@@ -1,7 +1,7 @@
-import { X, Globe, Camera } from "lucide-react";
+import { FaXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 import { FOOTER, NAV_LINKS } from "../../constants/content";
 
-const ICON_MAP = { X, Globe, Camera };
+const ICON_MAP = { Twitter: FaXTwitter, Linkedin: FaLinkedinIn, Instagram: FaInstagram };
 
 export default function Footer() {
   return (

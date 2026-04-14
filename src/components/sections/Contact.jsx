@@ -53,7 +53,7 @@ export default function Contact() {
     setSubmitted(true);
   }
 
-  const headlineChars = CONTACT.headline.split("");
+  const headlineWords = CONTACT.headline.split(" ");
 
   return (
     <section
@@ -65,9 +65,13 @@ export default function Contact() {
           ref={headlineRef}
           className="font-display text-5xl font-bold md:text-6xl lg:text-7xl"
         >
-          {headlineChars.map((char, i) => (
-            <span key={i} className="char inline-block">
-              {char === " " ? "\u00A0" : char}
+          {headlineWords.map((word, wi) => (
+            <span key={wi} className="inline-block whitespace-nowrap mr-[0.25em]">
+              {word.split("").map((char, ci) => (
+                <span key={ci} className="char inline-block">
+                  {char}
+                </span>
+              ))}
             </span>
           ))}
         </h2>
