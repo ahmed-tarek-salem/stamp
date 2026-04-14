@@ -1,6 +1,7 @@
 import SmoothScroll from "./components/layout/SmoothScroll";
 import CustomCursor from "./components/layout/CustomCursor";
 import Navbar from "./components/layout/Navbar";
+import Hero from "./components/sections/Hero";
 
 function App() {
   return (
@@ -8,9 +9,7 @@ function App() {
       <CustomCursor />
       <Navbar />
       <main>
-        <div className="h-screen flex items-center justify-center">
-          <h1 className="font-display text-6xl text-lime">Hero placeholder</h1>
-        </div>
+        <Hero />
         <div id="services" className="h-screen flex items-center justify-center">
           <h2 className="font-display text-4xl text-white">Services placeholder</h2>
         </div>
