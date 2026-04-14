@@ -3,6 +3,10 @@ import CustomCursor from "./components/layout/CustomCursor";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
 import Services from "./components/sections/Services";
+import About from "./components/sections/About";
+import Process from "./components/sections/Process";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -12,13 +16,11 @@ function App() {
       <main>
         <Hero />
         <Services />
-        <div id="about" className="h-screen flex items-center justify-center">
-          <h2 className="font-display text-4xl text-white">About placeholder</h2>
-        </div>
-        <div id="contact" className="h-screen flex items-center justify-center">
-          <h2 className="font-display text-4xl text-white">Contact placeholder</h2>
-        </div>
+        <About />
+        <Process />
+        <Contact />
       </main>
+      <Footer />
     </SmoothScroll>
   );
 }

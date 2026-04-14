@@ -73,8 +73,8 @@ export const CONTACT = {
 export const FOOTER = {
   copyright: `© ${new Date().getFullYear()} Stamp. All rights reserved.`,
   socials: [
-    { icon: "Twitter", href: "https://twitter.com", label: "Twitter" },
-    { icon: "Linkedin", href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: "Instagram", href: "https://instagram.com", label: "Instagram" },
+    { icon: "X", href: "https://twitter.com", label: "Twitter" },
+    { icon: "Globe", href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: "Camera", href: "https://instagram.com", label: "Instagram" },
   ],
 };
