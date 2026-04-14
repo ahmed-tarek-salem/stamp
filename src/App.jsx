@@ -2,6 +2,7 @@ import SmoothScroll from "./components/layout/SmoothScroll";
 import CustomCursor from "./components/layout/CustomCursor";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
+import Services from "./components/sections/Services";
 
 function App() {
   return (
@@ -10,9 +11,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <div id="services" className="h-screen flex items-center justify-center">
-          <h2 className="font-display text-4xl text-white">Services placeholder</h2>
-        </div>
+        <Services />
         <div id="about" className="h-screen flex items-center justify-center">
           <h2 className="font-display text-4xl text-white">About placeholder</h2>
         </div>
