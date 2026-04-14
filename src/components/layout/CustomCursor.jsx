@@ -4,14 +4,12 @@ import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 export default function CustomCursor() {
   const cursorRef = useRef(null);
-  const labelRef = useRef(null);
   const isTouch = useMediaQuery("(pointer: coarse)");
 
   useEffect(() => {
     if (isTouch) return;
 
     const cursor = cursorRef.current;
-    const label = labelRef.current;
 
     // Set initial centering transform
     gsap.set(cursor, { xPercent: -50, yPercent: -50 });
@@ -25,18 +23,13 @@ export default function CustomCursor() {
       yTo(e.clientY);
     }
 
-    function onMouseEnterHoverable(e) {
-      const cursorLabel = e.currentTarget.dataset.cursorLabel;
+    function onMouseEnterHoverable() {
       gsap.to(cursor, {
-        width: 64,
-        height: 64,
+        width: 40,
+        height: 40,
         duration: 0.3,
         ease: "power3.out",
       });
-      if (cursorLabel) {
-        label.textContent = cursorLabel;
-        gsap.to(label, { opacity: 1, duration: 0.2 });
-      }
     }
 
     function onMouseLeaveHoverable() {
@@ -46,7 +39,6 @@ export default function CustomCursor() {
         duration: 0.3,
         ease: "power3.out",
       });
-      gsap.to(label, { opacity: 0, duration: 0.2 });
     }
 
     window.addEventListener("mousemove", onMouseMove);
@@ -78,11 +70,6 @@ export default function CustomCursor() {
         width: 12,
         height: 12,
       }}
-    >
-      <span
-        ref={labelRef}
-        className="text-midnight text-xs font-body font-semibold opacity-0 select-none"
-      />
-    </div>
+    />
   );
 }
