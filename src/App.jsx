@@ -12,8 +12,11 @@ function App() {
   return (
     <SmoothScroll>
       <CustomCursor />
+      <a href="#services" className="skip-link">
+        Skip to content
+      </a>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <Services />
         <About />
