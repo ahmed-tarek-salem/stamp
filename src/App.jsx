@@ -10,9 +10,10 @@ import Footer from "./components/layout/Footer";
 
 function App() {
   return (
-    <SmoothScroll>
+    <>
       <CustomCursor />
-      <a href="#services" className="skip-link">
+      <SmoothScroll>
+        <a href="#services" className="skip-link">
         Skip to content
       </a>
       <Navbar />
@@ -23,8 +24,9 @@ function App() {
         <Process />
         <Contact />
       </main>
-      <Footer />
-    </SmoothScroll>
+        <Footer />
+      </SmoothScroll>
+    </>
   );
 }
 

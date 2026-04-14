@@ -12,22 +12,17 @@ export default function CustomCursor() {
 
     const cursor = cursorRef.current;
     const label = labelRef.current;
-    let mouseX = 0;
-    let mouseY = 0;
+
+    // Set initial centering transform
+    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+
+    // quickTo creates reusable tweens that update targets without recreating
+    const xTo = gsap.quickTo(cursor, "left", { duration: 0.15, ease: "power2.out" });
+    const yTo = gsap.quickTo(cursor, "top", { duration: 0.15, ease: "power2.out" });
 
     function onMouseMove(e) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    }
-
-    function animate() {
-      gsap.to(cursor, {
-        x: mouseX,
-        y: mouseY,
-        duration: 0.15,
-        ease: "power2.out",
-      });
-      requestAnimationFrame(animate);
+      xTo(e.clientX);
+      yTo(e.clientY);
     }
 
     function onMouseEnterHoverable(e) {
@@ -55,10 +50,9 @@ export default function CustomCursor() {
     }
 
     window.addEventListener("mousemove", onMouseMove);
-    animate();
 
     const hoverables = document.querySelectorAll(
-      "a, button, [data-cursor-hover]"
+      "a, button, [data-cursor-hover]",
     );
     hoverables.forEach((el) => {
       el.addEventListener("mouseenter", onMouseEnterHoverable);
@@ -83,7 +77,6 @@ export default function CustomCursor() {
       style={{
         width: 12,
         height: 12,
-        transform: "translate(-50%, -50%)",
       }}
     >
       <span
