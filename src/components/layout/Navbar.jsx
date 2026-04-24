@@ -46,10 +46,17 @@ export default function Navbar() {
       >
         <a
           href="#"
-          className="font-display text-2xl font-bold text-white"
+          className="flex items-center gap-2 font-display text-2xl font-bold text-white"
           data-cursor-label="Home"
         >
-          Stamp<span className="text-lime">.</span>
+          <img
+            src="/logo.svg"
+            alt="Stamp logo"
+            className="h-10 w-10 object-contain"
+          />
+          <span>
+            Stamp<span className="text-lime">.</span>
+          </span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

@@ -7,8 +7,15 @@ export default function Footer() {
   return (
     <footer className="border-t border-lime/10 bg-midnight px-6 py-12 md:px-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:justify-between">
-        <a href="#" className="font-display text-xl font-bold text-white">
-          Stamp<span className="text-lime">.</span>
+        <a href="#" className="flex items-center gap-2 font-display text-xl font-bold text-white">
+          <img
+            src="/logo.svg"
+            alt="Stamp logo"
+            className="h-8 w-8 object-contain"
+          />
+          <span>
+            Stamp<span className="text-lime">.</span>
+          </span>
         </a>
 
         <div className="flex items-center gap-6">
