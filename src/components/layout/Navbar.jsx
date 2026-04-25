@@ -3,6 +3,7 @@ import { gsap } from "../../hooks/useGsap";
 import { NAV_LINKS } from "../../constants/content";
 import { Menu, X } from "lucide-react";
 import Button from "../ui/Button";
+import { makeSmoothNavHandler } from "../../utils/smoothScroll";
 
 export default function Navbar() {
   const navRef = useRef(null);
@@ -46,6 +47,7 @@ export default function Navbar() {
       >
         <a
           href="#"
+          onClick={makeSmoothNavHandler("#")}
           className="flex items-center gap-2 font-display text-2xl font-bold text-white"
           data-cursor-label="Home"
         >
@@ -64,6 +66,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
+              onClick={makeSmoothNavHandler(link.href)}
               className="font-body text-sm text-gray transition-colors hover:text-white"
             >
               {link.label}
@@ -99,7 +102,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={makeSmoothNavHandler(link.href, () => setMenuOpen(false))}
               className="font-display text-3xl text-white transition-colors hover:text-lime"
             >
               {link.label}

@@ -1,5 +1,6 @@
 import { FaXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 import { FOOTER, NAV_LINKS } from "../../constants/content";
+import { makeSmoothNavHandler } from "../../utils/smoothScroll";
 
 const ICON_MAP = { Twitter: FaXTwitter, Linkedin: FaLinkedinIn, Instagram: FaInstagram };
 
@@ -7,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-lime/10 bg-midnight px-6 py-12 md:px-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:justify-between">
-        <a href="#" className="flex items-center gap-2 font-display text-xl font-bold text-white">
+        <a href="#" onClick={makeSmoothNavHandler("#")} className="flex items-center gap-2 font-display text-xl font-bold text-white">
           <img
             src="/logo.svg"
             alt="Stamp logo"
@@ -23,6 +24,7 @@ export default function Footer() {
             <a
               key={link.href}
               href={link.href}
+              onClick={makeSmoothNavHandler(link.href)}
               className="font-body text-sm text-gray transition-colors hover:text-white"
             >
               {link.label}

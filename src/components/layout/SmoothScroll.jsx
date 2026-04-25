@@ -12,6 +12,8 @@ export default function SmoothScroll({ children }) {
     });
 
     lenisRef.current = lenis;
+    // Expose globally so nav links / buttons can trigger fancy smooth scroll
+    if (typeof window !== "undefined") window.__lenis = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
 
@@ -23,6 +25,9 @@ export default function SmoothScroll({ children }) {
     return () => {
       lenis.destroy();
       gsap.ticker.remove(lenis.raf);
+      if (typeof window !== "undefined" && window.__lenis === lenis) {
+        delete window.__lenis;
+      }
     };
   }, []);
 
