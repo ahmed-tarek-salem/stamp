@@ -2,13 +2,14 @@ import { useRef } from "react";
 import { useGsap, gsap } from "../../hooks/useGsap";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { SERVICES } from "../../constants/content";
-import { Fingerprint, Globe, Smartphone } from "lucide-react";
+import { Fingerprint, Globe, Smartphone, Sparkles } from "lucide-react";
 import SectionTitle from "../ui/SectionTitle";
 
 const ICON_MAP = {
   Fingerprint,
   Globe,
   Smartphone,
+  Sparkles,
 };
 
 function ServiceCard({ service, index }) {

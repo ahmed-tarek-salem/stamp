@@ -31,6 +31,12 @@ export const SERVICES = [
     description:
       "Apps that feel as good as they function. We design and build digital products that users love and businesses depend on.",
   },
+  {
+    icon: "Sparkles",
+    title: "Content & Campaigns",
+    description:
+      "Videos, images, and stories crafted to move people. Brand-perfect content that ships at the speed your launches demand.",
+  },
 ];
 
 // TODO(demo): Replace WORK.projects with real client case studies before launch.
@@ -119,6 +125,7 @@ export const WORK = {
       image:
         "https://api.microlink.io/?url=https%3A%2F%2Fcelsious.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800",
       size: "regular",
+      variant: "block", // brand-block card — color story instead of screenshot
     },
     {
       id: "blanc",
