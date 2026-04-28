@@ -3,6 +3,54 @@ import { useGsap, gsap, ScrollTrigger } from "../../hooks/useGsap";
 import { HERO } from "../../constants/content";
 import { ChevronDown } from "lucide-react";
 
+/**
+ * Slow drifting gradient mesh — three blurred radial blobs that orbit lazily.
+ * Sits behind MorphShape + content. Adds atmospheric depth without competing.
+ */
+function GradientMesh() {
+  // Mask fades the mesh into pure midnight at the bottom so there's no hard
+  // edge against the next section. Same gradient applied as both mask and
+  // -webkit-mask for cross-browser support.
+  const fadeMask =
+    "linear-gradient(to bottom, black 0%, black 60%, transparent 100%)";
+
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 overflow-hidden"
+      style={{
+        maskImage: fadeMask,
+        WebkitMaskImage: fadeMask,
+      }}
+    >
+      {/* Lime accent blob — top left */}
+      <div
+        className="mesh-blob-1 absolute -top-1/4 -left-1/4 h-[60vw] w-[60vw] rounded-full opacity-30 blur-[120px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(132,204,22,0.6) 0%, rgba(132,204,22,0) 70%)",
+        }}
+      />
+      {/* Cool deep accent — bottom right */}
+      <div
+        className="mesh-blob-2 absolute -bottom-1/4 -right-1/4 h-[55vw] w-[55vw] rounded-full opacity-25 blur-[140px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(56,189,248,0.4) 0%, rgba(56,189,248,0) 70%)",
+        }}
+      />
+      {/* Warm midnight glow — center */}
+      <div
+        className="mesh-blob-3 absolute top-1/3 left-1/2 h-[45vw] w-[45vw] -translate-x-1/2 rounded-full opacity-20 blur-[110px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(132,204,22,0.35) 0%, rgba(26,26,46,0) 70%)",
+        }}
+      />
+    </div>
+  );
+}
+
 function MorphShape() {
   const svgRef = useRef(null);
 
@@ -117,6 +165,7 @@ export default function Hero() {
       ref={sectionRef}
       className="relative flex h-screen items-center justify-center overflow-hidden bg-midnight px-6"
     >
+      <GradientMesh />
       <MorphShape />
 
       <div className="relative z-10 max-w-4xl text-center">
