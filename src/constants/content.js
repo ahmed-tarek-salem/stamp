@@ -95,22 +95,6 @@ export const WORK = {
       size: "tall",
     },
     {
-      id: "momofuku",
-      name: "Momofuku",
-      url: "https://momofuku.com",
-      category: "Restaurant · Brand",
-      year: "2025",
-      challenge:
-        "A legendary restaurant group growing beyond its cult following — needed a brand that could scale without losing soul.",
-      solution:
-        "A confident typographic system, warm peach accents, and an editorial voice that treats menus like stories.",
-      metric: { value: "+42%", label: "Direct reservation revenue" },
-      palette: ["#F4A261", "#1A0F0A", "#F5E6D3"],
-      image:
-        "https://api.microlink.io/?url=https%3A%2F%2Fmomofuku.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1400&viewport.height=800",
-      size: "wide",
-    },
-    {
       id: "celsious",
       name: "Celsious",
       url: "https://celsious.com",
@@ -143,6 +127,22 @@ export const WORK = {
         "https://api.microlink.io/?url=https%3A%2F%2Fblancliving.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800",
       size: "regular",
     },
+    {
+      id: "momofuku",
+      name: "Momofuku",
+      url: "https://momofuku.com",
+      category: "Restaurant · Brand",
+      year: "2025",
+      challenge:
+        "A legendary restaurant group growing beyond its cult following — needed a brand that could scale without losing soul.",
+      solution:
+        "A confident typographic system, warm peach accents, and an editorial voice that treats menus like stories.",
+      metric: { value: "+42%", label: "Direct reservation revenue" },
+      palette: ["#F4A261", "#1A0F0A", "#F5E6D3"],
+      image:
+        "https://api.microlink.io/?url=https%3A%2F%2Fmomofuku.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1400&viewport.height=800",
+      size: "wide",
+    },
   ],
 };
 
@@ -161,28 +161,33 @@ export const PROCESS = [
   {
     icon: "Search",
     title: "Discover",
-    description: "We dive deep into your vision, audience, and market to uncover what makes you unique.",
+    description:
+      "We dive deep into your vision, audience, and market to uncover what makes you unique.",
   },
   {
     icon: "Palette",
     title: "Design",
-    description: "We shape your brand identity and digital presence with purpose and precision.",
+    description:
+      "We shape your brand identity and digital presence with purpose and precision.",
   },
   {
     icon: "Code",
     title: "Develop",
-    description: "We bring designs to life with clean, performant code that scales with your ambition.",
+    description:
+      "We bring designs to life with clean, performant code that scales with your ambition.",
   },
   {
     icon: "Rocket",
     title: "Deliver",
-    description: "We launch your brand into the world — polished, tested, and ready to make an impact.",
+    description:
+      "We launch your brand into the world — polished, tested, and ready to make an impact.",
   },
 ];
 
 export const CONTACT = {
   headline: "Ready to be identified?",
-  description: "Tell us about your startup. Let's build something unforgettable together.",
+  description:
+    "Tell us about your startup. Let's build something unforgettable together.",
 };
 
 export const FOOTER = {
