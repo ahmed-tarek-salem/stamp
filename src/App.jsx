@@ -1,6 +1,7 @@
 import SmoothScroll from "./components/layout/SmoothScroll";
 import CustomCursor from "./components/layout/CustomCursor";
 import IntroLoader from "./components/layout/IntroLoader";
+import GrainOverlay from "./components/layout/GrainOverlay";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
 import Services from "./components/sections/Services";
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <IntroLoader />
+      <GrainOverlay />
       <CustomCursor />
       <SmoothScroll>
         <a href="#services" className="skip-link">

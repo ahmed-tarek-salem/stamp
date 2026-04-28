@@ -30,7 +30,7 @@ export default function Work() {
           ease: "power3.out",
           stagger: 0.1,
           scrollTrigger: defaultScrollTrigger(gridRef.current),
-        }
+        },
       );
     }
 
@@ -46,7 +46,7 @@ export default function Work() {
           delay: 0.15,
           ease: "power3.out",
           scrollTrigger: defaultScrollTrigger(subheadRef.current),
-        }
+        },
       );
     }
   });
@@ -68,10 +68,7 @@ export default function Work() {
           <SectionTitle className="mb-6">
             Selected <span className="text-lime italic">Work</span>
           </SectionTitle>
-          <p
-            ref={subheadRef}
-            className="max-w-2xl font-body text-lg text-gray"
-          >
+          <p ref={subheadRef} className="max-w-2xl font-body text-lg text-gray">
             {WORK.subhead}
           </p>
         </div>
@@ -83,7 +80,8 @@ export default function Work() {
         >
           {WORK.projects.map((project, i) => {
             // Assign last project to hero size so it spans full row
-            const sizeKey = i === WORK.projects.length - 1 ? "hero" : project.size;
+            const sizeKey =
+              i === WORK.projects.length - 1 ? "hero" : project.size;
             return (
               <WorkCard
                 key={project.id}
@@ -117,21 +115,13 @@ function WorkCard({ project, sizeClass }) {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
     tl.to(imageRef.current, { scale: 1.08, duration: 0.8 }, 0)
       .to(overlayRef.current, { opacity: 1, duration: 0.4 }, 0)
-      .to(
-        titleRef.current,
-        { y: -6, duration: 0.4 },
-        0
-      )
-      .to(
-        lineRef.current,
-        { scaleX: 1, duration: 0.5 },
-        0.05
-      )
+      .to(titleRef.current, { y: -6, duration: 0.4 }, 0)
+      .to(lineRef.current, { scaleX: 1, duration: 0.5 }, 0.05)
       .fromTo(
         metricRef.current,
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.5 },
-        0.1
+        0.1,
       )
       .fromTo(
         paletteRef.current?.children || [],
@@ -143,7 +133,7 @@ function WorkCard({ project, sizeClass }) {
           stagger: 0.06,
           ease: "back.out(2)",
         },
-        0.15
+        0.15,
       );
   };
 
@@ -157,7 +147,7 @@ function WorkCard({ project, sizeClass }) {
       .to(
         paletteRef.current?.children || [],
         { scale: 0, opacity: 0, duration: 0.2, stagger: 0.03 },
-        0
+        0,
       );
   };
 
