@@ -16,7 +16,7 @@ const SLIDES = [
   {
     id: "hook",
     eyebrow: "01 / Manifesto",
-    headline: ["Most startups die", "invisible."],
+    headline: ["Most startups die", "invisible"],
     sub: "Not from bad ideas. From bad branding.",
     image: "/pitch/slide-1.png",
     textPosition: "upper-left",
@@ -24,7 +24,7 @@ const SLIDES = [
   {
     id: "promise",
     eyebrow: "02 / Why Stamp",
-    headline: ["We make sure", "yours doesn't."],
+    headline: ["We make sure", "yours doesn't"],
     sub: "Brand. Identity. Story. Ship.",
     image: "/pitch/slide-2.png",
     textPosition: "left",
@@ -32,7 +32,7 @@ const SLIDES = [
   {
     id: "work",
     eyebrow: "03 / What we do",
-    headline: ["Identity. Web.", "Apps. Content."],
+    headline: ["Identity. Web.", "Apps. Content"],
     sub: "Four crafts. One discipline.",
     image: "/pitch/slide-3.png",
     textPosition: "top",
@@ -41,7 +41,7 @@ const SLIDES = [
   {
     id: "pace",
     eyebrow: "04 / How we work",
-    headline: ["From whisper", "to roar."],
+    headline: ["From whisper", "to roar"],
     sub: "Discovery → Design → Develop → Deliver. In days, not weeks.",
     image: "/pitch/slide-4.png",
     textPosition: "left",
@@ -49,7 +49,7 @@ const SLIDES = [
   {
     id: "ask",
     eyebrow: "05 / Let's go",
-    headline: ["Let's stamp", "your story."],
+    headline: ["Let's stamp", "your story"],
     sub: "Tell us what you're building. We'll handle how the world sees it.",
     image: "/pitch/slide-5.png",
     textPosition: "upper-left",
